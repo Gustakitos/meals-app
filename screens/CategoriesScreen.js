@@ -1,7 +1,13 @@
 import React from 'react';
-import {View, Text, StyleSheet, FlatList, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  TouchableOpacity,
+} from 'react-native';
 
-import {CATEGORIES} from '../data/dummy-data';
+import { CATEGORIES } from '../data/dummy-data';
 
 import CategoryGridTitle from '../components/CategoryGridTitle/CategoryGridTitle';
 
