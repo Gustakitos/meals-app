@@ -30,7 +30,9 @@ const CategoryMealsScreen = (props) => {
 
   const selectedCategory = CATEGORIES.find((cat) => cat.id === catId);
 
-  props.navigation.setOptions({ title: selectedCategory.title });
+  props.navigation.setOptions({
+    title: selectedCategory.title,
+  });
   return (
     <View style={styles.screen}>
       <FlatList
@@ -41,10 +43,6 @@ const CategoryMealsScreen = (props) => {
       />
     </View>
   );
-};
-
-CategoryMealsScreen.navigationOptions = (navigationData) => {
-  console.log(navigationData);
 };
 
 const styles = StyleSheet.create({
