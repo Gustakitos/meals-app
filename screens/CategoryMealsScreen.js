@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, FlatList } from 'react-native';
 
 import { CATEGORIES, MEALS } from '../data/dummy-data';
 import MealItem from '../components/MealItem/MealItem';
-import Meal from '../models/meal';
 
 const CategoryMealsScreen = (props) => {
   const renderMealItem = (itemData) => {
@@ -14,7 +13,11 @@ const CategoryMealsScreen = (props) => {
         duration={itemData.item.duration}
         complexity={itemData.item.complexity}
         affordability={itemData.item.affordability}
-        onSelectMeal={() => {}}
+        onSelectMeal={() => {
+          props.navigation.navigate('MealDetail', {
+            mealId: itemData.item.id,
+          });
+        }}
       />
     );
   };
