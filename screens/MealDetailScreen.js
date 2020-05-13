@@ -10,6 +10,7 @@ const MealDetailScreen = (props) => {
   const selectedMeal = MEALS.find((meal) => meal.id === mealId);
 
   props.navigation.setOptions({
+    title: selectedMeal.title,
     headerRight: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
