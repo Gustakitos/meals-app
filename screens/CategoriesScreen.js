@@ -26,10 +26,6 @@ const CategoriesScreen = (props) => {
     );
   };
 
-  props.navigation.setOptions({
-    title: 'Meals Categories',
-  });
-
   return (
     <FlatList data={CATEGORIES} renderItem={renderGridItem} numColumns={2} />
   );
